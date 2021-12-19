@@ -1,7 +1,7 @@
 # calculadora
 
 Esta aplicação mostra como se implementa uma página que recolhe informação num formulário, faz seu processamento no back-end, e retorna um resultado associado.
-
+![](calculadoraView.png)
 Passos: 
 1. Define-se em [forms.py](https://github.com/CR-21-22/calculadora/blob/main/calculadora/forms.py) uma classe para o formulario, que servirá para recolher a(s) info(s) inserida(s) no formulário. Neste caso existe apenas um input, uma expressão matemática guardada como uma string. 
 2. No ficheiro [views.py](https://github.com/CR-21-22/calculadora/blob/main/calculadora/views.py) na respetiva view (index no exemplo), cria-se um objeto `form` vazio da classe formulario.
