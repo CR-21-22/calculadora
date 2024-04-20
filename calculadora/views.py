@@ -1,28 +1,18 @@
 from django.shortcuts import render
 
-# Create your views here.
-from calculadora.forms import CalculadoraForm
-
-
 def index(request):
 
     resultado = expressao = None
 
     if request.POST:
-        form = CalculadoraForm(request.POST). # a expressão submetida no formulário é guardada na variável form
-        if form.is_valid():
-            expressao = form.cleaned_data['expressao']
+            expressao = request.POST['expressao'] 
             try:
                 resultado = eval(expressao)
             except:
                 resultado = "expressão inválida"
-
-    form = CalculadoraForm(None)
-
+    
     context = {
-        'form': form,
         'resultado': resultado,
         'expressao': expressao
     }
-
     return render(request, 'calculadora/index.html', context)

@@ -9,11 +9,11 @@
 
     <form action="" method='post'>
         {% csrf_token %}
-        {{ form.as_p }}
+        Expressão: <input type="text" name="expressao">
         <input type="submit" value="calcular">
     </form>
 
-    {% if resultado != None %}
+    {% if resultado %}
         <p>{{ expressao }} = {{ resultado }}</p>
     {% endif %}
 
